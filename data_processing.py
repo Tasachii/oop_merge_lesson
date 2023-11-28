@@ -214,7 +214,7 @@ print("First class:", my_avg_1, "Third class:", my_avg_2)
 my_filtered_table = my_table5.filter(lambda x: x['embarked'] == 'Southampton' and x['gender'] == 'M')
 print("Total number is", len(my_filtered_table.table))
 
-# Pivot table test
+# Pivot table tests
 my_pivot = my_table5.pivot_table(['embarked', 'gender', 'class'], ['fare', 'fare', 'fare', 'last'], [lambda x: min(x), lambda x: max(x), lambda x: sum(x)/len(x), lambda x: len(x)])
 print(my_pivot)
 
